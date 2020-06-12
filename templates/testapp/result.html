@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{%load staticfiles %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{%static "css/static1.css"%}">
+
+    <title></title>
+  </head>
+  <body>
+<h1>Thanks For Registration...Plaese check your details</h1>
+<ul>
+  {% for key,value in request.session.items%}
+  <li>{{key|upper}}:{{value|title}}</li>
+  {%endfor%}
+</ul>
+  </body>
+</html>
